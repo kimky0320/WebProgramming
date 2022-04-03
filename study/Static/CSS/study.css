@@ -1,0 +1,187 @@
+a{
+    text-decoration-line: none;
+    color: black;
+}
+input:focus {outline:none;}
+/* 헤더 */
+header ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+}
+header ul li{
+    display: inline-block;
+    vertical-align: middle;
+}
+#mainform{
+    margin-left: 10%;
+    width: 26%;
+}
+#mainform{
+    position: relative;
+}
+#search{
+    position:absolute;
+    left: 0px;
+    top: -20px;
+    height: 35px;
+    width: 200px;
+    z-index: 1;
+    border-radius: 25px 25px 25px 25px;
+    padding-left: 50px;
+}
+#searchsubmit{
+    position: absolute;
+    left: 7px;
+    top: -13px;
+    background-image: url('../Image/search.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    z-index: 2;
+}
+
+#maintext{
+    width: 26%;
+    text-align: center;
+}
+#userprofile{
+    width: 26%;
+    margin-right: 10%;
+}
+#userprofile a{
+    float: right;
+    margin-right: 0;
+}
+#userimg{
+    width: 40px;
+    height: 35px;
+    border-radius: 25px 25px 25px 25px;
+}
+/* nav 시작 */
+#mainbar{
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+.mainbar{
+    margin: auto;
+}
+/* nav 끝 */
+/* 헤더끝 */
+/* 중간 섹션*/
+#mainimg{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 500px;
+}
+
+#imgbar{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.imgbar{
+    display: inline-block;
+}
+/* 중간섹션 끝*/
+/* 마지막 섹션 */
+/* 헤더 시작 */
+section header h3{
+    margin-left: 10%;
+}
+section header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+}
+section header ul li{
+    display: inline-block;
+}
+.sectionimg{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+/* 헤더 끝 */
+/* 섹션 시작 */
+section section{
+    display: flex;
+    justify-content: space-between;
+}
+#review{
+    margin-left: 10%;
+    width: 40%;
+}
+#review ul{
+    list-style: none;
+    padding: 0;
+}
+#tripsearch{
+    margin-right: 10%;
+    width: 40%;
+}
+#tripsearch div{
+    display: flex;
+    justify-content: space-between;
+}
+
+iframe{
+    width: 400px;
+    height: 250px;
+}
+#tripsearch form{
+    display: inline-flex;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#tripsearch form select{
+    display: block;
+    height:30px;
+    width: 100px;
+}
+#tripsearch form label{
+    display: block;
+}
+/* 섹션 끝 */
+/* 푸터 시작 */
+section footer{
+    display: flex;
+    justify-content: space-between;
+}
+#rank1{
+    margin-left: 10%;
+    width: 40%;
+}
+#rank2{
+    margin-right:10%;
+    width:40%
+}
+table{
+    text-align: center;
+}
+table th{
+    padding-right:15px;
+    padding-left: 15px;
+    background-color: rgba(211, 211, 211, 0.5);
+    border-top: 0.1px solid black;
+}
+table td{
+    border-bottom: 0.1px solid black;
+}
+/*푸터 끝 */
+/*마지막 섹션 끝*/
