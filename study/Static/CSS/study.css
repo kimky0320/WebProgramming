@@ -1,57 +1,66 @@
+/* 시작하기전에 알고 가야하는거 
+    태그 선택자: 다른 특수문자 없이 그냥 사용
+    id 선택자: #(id이름)
+    클래스 선택자:.(클래스 이름)
+    id랑 클래스랑 다른점: id값은 한번만 사용가능 class값은 중복사용가능해 여러개에 css 적용해야할때 사용 
+    태그 태그{} 이렇게 태그를 이어붙어 태그밑에 있는 하위 속성에 접근할수있음 header ul{} 이렇게 되어있으면 header태그 밑에있는 ul에 적용한다는뜻
+    */
+
 a{
-    text-decoration-line: none;
-    color: black;
+    text-decoration-line: none; /* 하이퍼링크 파란색으로 표시된 글자 없애줌 */
+    color: black; /* a태그 글자를 검은색으로 만들어줌 */
 }
-input:focus {outline:none;}
+input:focus {outline:none;} /* input태그의 입력할때 테두리 강조되는거 없앰 */
 /* 헤더 */
 header ul{
-    list-style: none;
-    padding: 0%;
+    list-style: none; /* li각 요소 앞에 점찍혀있는거 없앰 */
+    padding: 0%; /* 패딩이랑 마진은 검색해서 확실히 알고가는게 좋을듯 이건 계속 써야됨 */
     margin: 0;
 }
 header ul li{
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; /* 이거도 검색해서 확실히 알고가야됨 */
+    vertical-align: middle; /* 요소 내에서 세로기준으로 컨텐츠를 가운데 배치 */
 }
+/* header에서 제목을 가운데 배치하기 위해 전체 100%크기중 왼쪽 10% 오른쪽 10% 주고 나머지 form,제목,유저프로필태그를
+    80%에서 3등분하여 제목을 가운데 올수있게 배치함 */
+
 #mainform{
-    margin-left: 10%;
-    width: 26%;
-}
-#mainform{
-    position: relative;
+    margin-left: 10%; /* 왼쪽 여백을 위해 모든 요소 margin-left 10% 씩줌 */
+    width: 26%; /* 80/3 한 값이 26이라서 26%로 너비를 줌 */
+    position: relative; /* 검색박스 위에 버튼을 겹쳐 놔두기 위해 상대위치로 설정 */
 }
 #search{
-    position:absolute;
+    position:absolute; /* 겹쳐서 놔두기 위해 절대위치로 설정후 left top 속성을 이용해 위치 설정 */
     left: 0px;
     top: -20px;
     height: 35px;
     width: 200px;
-    z-index: 1;
-    border-radius: 25px 25px 25px 25px;
+    z-index: 1; /* 겹치는 상황에서 어떤게 제일 위에 올지 설정 숫자가 낮을수록 밑에 깔림 */
+    border-radius: 25px 25px 25px 25px; /*검색창 테두리?를 둥글게 표현하려고 사용 이건 굳이 안써도됨 */
     padding-left: 50px;
 }
 #searchsubmit{
-    position: absolute;
+    position: absolute; 
     left: 7px;
     top: -13px;
-    background-image: url('../Image/search.png');
-    background-size: cover;
+    background-image: url('../Image/search.png'); /* 버튼에 배경을 돋보기 모양사진으로 줌 */
+    background-size: cover; /* 배경크기랑 사진크기가 안맞으면 사진이 크기에 맞춰 도배가 될수있어 크기가 안맞아도 한장으로 배경을 꽉채움 */
     width: 20px;
     height: 20px;
-    border-style: none;
+    border-style: none; /* 테두리를 없앰 */
     z-index: 2;
 }
 
 #maintext{
     width: 26%;
-    text-align: center;
+    text-align: center; /* 글자 가운데 정렬 */
 }
 #userprofile{
     width: 26%;
-    margin-right: 10%;
+    margin-right: 10%; /* 오른쪽 여백위해 10% 띄움 */
 }
 #userprofile a{
-    float: right;
+    float: right; /* 기본값이 왼쪽이라 오른쪽에 배치하기 위해 사용 */
     margin-right: 0;
 }
 #userimg{
@@ -65,13 +74,13 @@ header ul li{
     height: 40px;
     margin: auto;
     margin-bottom: 20px;
-    list-style: none;
-    text-align: center;
+    list-style: none; /* 점없앰 */
+    text-align: center; /* 글자 가운데 정렬 */
     padding: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: rgba(211, 211, 211, 0.5);
+    display: flex; /* flex 사용 */
+    justify-content: space-between; /* flex 속성 이용하여 요소를 동일한 공백으로 나누어 배치함 */
+    flex-direction: row; /* 가로 정렬 */
+    background-color: rgba(211, 211, 211, 0.5); /* 배경색 설정 앞에 3개는 rgb값이고 4번째는 투명도 0~1의 값을 가짐 */
 }
 .mainbar{
     margin: auto;
@@ -80,9 +89,9 @@ header ul li{
 /* 헤더끝 */
 /* 중간 섹션*/
 #mainimg{
-    display: block;
-    margin: auto;
-    width: 80%;
+    display: block; /* img 태그는 기본값이 inline이므로 block으로 설정 */
+    margin: auto; /* 가운데 정렬 */
+    width: 80%; /* 모든 요소 좌우 10% 공백위해 80%로 크기 설정*/
     height: 500px;
 }
 
@@ -146,8 +155,8 @@ iframe{
 #tripsearch form{
     display: inline-flex;
     height: 250px;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: space-between; /* 세로 크기에 맞춰서 각 요소간 같은 공백을 가지고 배치 모르겠으면 검색 이건 설명하기 힘드네 */
 }
 #tripsearch form select{
     display: block;
@@ -155,7 +164,7 @@ iframe{
     width: 100px;
 }
 #tripsearch form label{
-    display: block;
+    display: block; /* label태그 기본값이 inline이라 한줄에 하나만 놔두기 위해 block으로 바꿈 */
 }
 /* 섹션 끝 */
 /* 푸터 시작 */
