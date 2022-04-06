@@ -1,12 +1,13 @@
 const express=require('express');
-const mainTemplate=require('./template/mainTemplate');
+const mainTemplate=require('./lib/template/mainTemplate');
 const bodyParser=require('body-parser');
 const path=require('path');
-
-const saleRouter=require('./Router/saleRouter');
-const locationRouter=require('./Router/locationRouter');
+const db=require('./lib/db');
+const saleRouter=require('./lib/Router/saleRouter');
+const locationRouter=require('./lib/Router/saleRouter');
 
 const app=express();
+
 
 app.use(bodyParser.urlencoded({extended:false}));
 //사용자가 내부적으로 전송한 post 데이터를 분석해서 모든데이터를 가져온다음 req.body 에 저장
@@ -16,8 +17,10 @@ app.use('/sale',saleRouter);
 app.use('/locatoin',locationRouter);
 
 app.get('/',(req,res)=>{
-    html=mainTemplate.mainHTML();
-    res.send(html);
+    db.query('SELECT * FROM review ORDER by id DESC',(err,review)=>{
+        html=mainTemplate.mainHTML(review);
+        res.send(html);
+    })
 });
 
 app.listen(3000,()=>{

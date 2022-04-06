@@ -10,5 +10,6 @@ router.get('/',(req,res)=>{ //location 메인페이지
 });
 
 router.get('/:pageId',(req,res)=>{ //location 상세보기 페이지
-
+    var pageId=req.params.pageId;
 });
+module.exports=router;

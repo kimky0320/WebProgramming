@@ -22,12 +22,24 @@ reviewTemplate=(review)=>{
     reviewList="";
     reviewList+="<ul>";
     for(var i=0;i<2;i++){
-        reviewList+=`<li><p>★★★★★</p>후기가 어쩌고 저쩌고 좋아요~~!!</li>`
+        reviewList+=`<li><p>${countingStar(review[i].star)}</p>${review[i].description}</li>`
     }
+    return reviewList;
 }
 //아직 구현못함
 
-exports.mainHTML=()=>{
+countingStar=(num)=>{
+    var star="";
+    for(var i=0;i<num;i++){
+        star+='★';
+    }
+    for(var i=0;i<5-num;i++){
+        star+='☆';
+    }
+    return star;
+}
+
+exports.mainHTML=(review)=>{
     var html=`
     <!DOCTYPE html>
     <html lang="ko">
@@ -98,10 +110,7 @@ exports.mainHTML=()=>{
             <section>
                 <div id="review">
                     <h4>베스트 후기</h4>
-                <ul>
-                    <li><p>★★★★★</p>후기가 어쩌고 저쩌고 좋아요~~!!</li>
-                    <li><p>★☆☆☆☆</p>여긴 좀 에바인듯...</li>
-                </ul>
+                ${reviewTemplate(review)}
                 </div>
                 <div id="tripsearch">
                 <h4>빠른 여행지 찾기</h4>
