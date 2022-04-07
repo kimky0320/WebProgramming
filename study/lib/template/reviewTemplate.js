@@ -1,6 +1,5 @@
 const reviewList=(review)=>{
     var num=(review.length>5) ? 5 : review.length;
-    console.log(num);
     var html="<ul id=reviewList>";
     for(var i=0;i<num;i++){
         var star=review[i].star;
@@ -49,7 +48,7 @@ exports.reviewHTML=(review)=>{
                     </form>
                 </li>
                 <li id="maintext">
-                    <h1>어쩌구저쩌구</h1>
+                    <a href="/"><h1>어쩌구저쩌구</h1></a>
                 </li>
                 <li id="userprofile">
                     <a href="/user"><img src="../Image/user.png" id="userimg"></a>
@@ -66,8 +65,68 @@ exports.reviewHTML=(review)=>{
             </nav>
         </header>
         <section>
-            <button type="button" class="w-btn w-btn-indigo"  onclick="location.href='/board/create'">글쓰기</button>
+            <button type="button" class="w-btn w-btn-indigo"  onclick="location.href='/review/create'">글쓰기</button>
             ${reviewList(review)}
+        </section>
+    </body>
+    </html>
+    `
+    return html;
+}
+
+exports.review_create_HTML=()=>{
+    var html=`
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/CSS/review_create.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li id="mainform">
+                    <form>
+                        <input type="submit" id="searchsubmit" value="">
+                        <input type="search" id="search" placeholder="검색">
+                    </form>
+                </li>
+                <li id="maintext">
+                    <a href="/"><h1>어쩌구저쩌구</h1></a>
+                </li>
+                <li id="userprofile">
+                    <a href="/user"><img src="../Image/user.png" id="userimg"></a>
+                </li>
+            </ul>
+            <nav>
+                <ul id="mainbar">
+                    <li class="mainbar">지역</li>
+                    <li class="mainbar">테마</li>
+                    <li class="mainbar">예약</li>
+                    <li class="mainbar">게시판</li>
+                    <li class="mainbar">순위</li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <form action="create_process" method="post">
+                <input type="text" id="location" placeholder="지역을 입력하세요" name="location">
+                <select id="star" name="star">
+                    <option>별점</option>
+                    <option value="1">★☆☆☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="5">★★★★★</option>
+                </select>
+                <input type="text" id="description" placeholder="내용을 입력하세요" name="description">
+                <div id="button">
+                    <button type="submit" id="createButton">작성</button>
+                    <button type="button" id="cancleButton" onclick="location.href='/'">취소</button>
+                </div>
+            </form>
         </section>
     </body>
     </html>
