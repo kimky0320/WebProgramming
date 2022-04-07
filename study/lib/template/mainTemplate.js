@@ -59,7 +59,7 @@ exports.mainHTML=(review)=>{
                     </form>
                 </li>
                 <li id="maintext">
-                    <h1>어쩌구 저쩌구</h1>
+                    <a href="/"><h1>어쩌구저쩌구</h1></a>
                 </li>
                 <li id="userprofile">
                     <a href="/user"><img src="/Image/user.png" id="userimg"></a>
