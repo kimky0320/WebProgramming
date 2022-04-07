@@ -5,6 +5,7 @@ const path=require('path');
 const db=require('./lib/db');
 const saleRouter=require('./lib/Router/saleRouter');
 const locationRouter=require('./lib/Router/saleRouter');
+const reviewRouter=require('./lib/Router/reviewRouter');
 
 const app=express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'Static')));
 app.use('/sale',saleRouter);
 app.use('/locatoin',locationRouter);
+app.use('/review',reviewRouter);
 
 app.get('/',(req,res)=>{
     db.query('SELECT * FROM review ORDER by id DESC',(err,review)=>{
