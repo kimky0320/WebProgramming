@@ -133,11 +133,17 @@ section section{
 }
 #review{
     margin-left: 10%;
-    width: 40%;
+    width: 20%;
+}
+#review h4{
+    display: inline-block;
 }
 #review ul{
     list-style: none;
     padding: 0;
+}
+.reviewFont{
+    font-size: small;
 }
 #tripsearch{
     margin-right: 10%;

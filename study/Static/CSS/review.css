@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+header ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+}
+header ul li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#mainform{
+    margin-left: 10%; 
+    width: 26%;
+    position: relative;
+}
+#search{
+    position:absolute; 
+    left: 0px;
+    top: -20px;
+    height: 35px;
+    width: 200px;
+    z-index: 1; 
+    border-radius: 25px 25px 25px 25px; 
+    padding-left: 50px;
+}
+#searchsubmit{
+    position: absolute; 
+    left: 7px;
+    top: -13px;
+    background-image: url('../Image/search.png'); 
+    background-size: cover; 
+    width: 20px;
+    height: 20px;
+    border-style: none; 
+    z-index: 2;
+}
+
+#maintext{
+    width: 26%;
+    text-align: center; 
+}
+#userprofile{
+    width: 26%;
+    margin-right: 10%; 
+}
+#userprofile a{
+    float: right;
+    margin-right: 0;
+}
+#userimg{
+    width: 40px;
+    height: 35px;
+    border-radius: 25px 25px 25px 25px;
+}
+/* nav 시작 */
+#mainbar{
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+    list-style: none; 
+    text-align: center; 
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(211, 211, 211, 0.5); 
+}
+.mainbar{
+    margin: auto;
+}
+/* section 시작 */
+section{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+section button{
+    float:right;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: aliceblue;
+    color: #1e6b7b;
+}
+#reviewList{
+    list-style: none;
+    padding: 0;
+}
+.reviewList{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.reviewList h4{
+    display: inline-block;
+    padding-right: 2%;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+.reviewList h5{
+    display: inline-block;
+    padding-left: 2%;
+}
