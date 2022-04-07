@@ -22,7 +22,7 @@ reviewTemplate=(review)=>{
     reviewList="";
     reviewList+="<ul>";
     for(var i=0;i<2;i++){
-        reviewList+=`<li><p>${countingStar(review[i].star)}</p>${review[i].description}</li>`
+        reviewList+=`<li><p>${countingStar(review[i].star)}</p><a class="reviewFont" href="/review/detail/${review[i].id}">${review[i].description}</a></li>`
     }
     return reviewList;
 }
@@ -110,6 +110,7 @@ exports.mainHTML=(review)=>{
             <section>
                 <div id="review">
                     <h4>베스트 후기</h4>
+                    <a href="/review">+</a>
                 ${reviewTemplate(review)}
                 </div>
                 <div id="tripsearch">
