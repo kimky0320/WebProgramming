@@ -33,31 +33,51 @@
         </nav>
     </header>
     <section>
-        <button type="button" onclick="location.href='/board/create'">글쓰기</button>
+        <button type="button" id="createButton" onclick="location.href='/board/create'">글쓰기</button>
         <ul id="reviewList">
             <li class="reviewList">
                 <h4>장소</h4>
                 <h5>★★★★★</h5>
+                <form action="delete_process" method="post">
+                    <input type="hidden" value="1" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
                 <p>후기가 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고</p>
             </li>
             <li class="reviewList">
                 <h4>장소</h4>
                 <h5>★★★★★</h5>
+                <form action="delete_process" method="post">
+                    <input type="hidden" value="2" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
                 <p>후기가 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고</p>
             </li>
             <li class="reviewList">
                 <h4>장소</h4>
                 <h5>★★★★★</h5>
+                <form action="delete_process" method="post">
+                    <input type="hidden" value="3" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
                 <p>후기가 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고</p>
             </li>
             <li class="reviewList">
                 <h4>장소</h4>
                 <h5>★★★★★</h5>
+                <form action="delete_process" method="post">
+                    <input type="hidden" value="4" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
                 <p>후기가 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고</p>
             </li>
             <li class="reviewList">
                 <h4>장소</h4>
                 <h5>★★★★★</h5>
+                <form action="delete_process" method="post">
+                    <input type="hidden" value="5" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
                 <p>후기가 어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고</p>
             </li>
         </ul>

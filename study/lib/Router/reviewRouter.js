@@ -30,14 +30,18 @@ router.post('/create_process',(req,res)=>{
 });
 
 router.get('/detail/:pageId',(req,res)=>{ //상세보기 구현
-    pagdId=req.params.pageId;
+    const pagdId=req.params.pageId;
     db.query(`SELECT * FROM review WHERE id=?`,[pageId],(err,review)=>{
         
     });
 });
 
 router.post('/delete_process',(req,res)=>{ //삭제하기 구현
-
+    const body=req.body;
+    const id=parseInt(body.id);
+    db.query(`DELETE FROM review WHERE id=${id}`,(err,result)=>{
+        res.redirect(302,'/review');
+    });
 });
 
 module.exports=router;

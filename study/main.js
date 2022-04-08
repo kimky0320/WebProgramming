@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
     db.query('SELECT * FROM review ORDER by id DESC',(err,review)=>{
         html=mainTemplate.mainHTML(review);
         res.send(html);
-    })
+    });
 });
 
 app.listen(3000,()=>{

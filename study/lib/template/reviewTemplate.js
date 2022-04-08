@@ -9,6 +9,10 @@ const reviewList=(review)=>{
         <li class="reviewList">
             <h4>${location}</h4>
             <h5>${countingStar(star)}</h5>
+            <form action="/review/delete_process" method="post">
+                    <input type="hidden" value="${review[i].id}" name="id">
+                    <button class="deleteButton" type="submit">X</button>
+                </form>
             <p>${description}</p>
         </li>`
     }
@@ -65,7 +69,7 @@ exports.reviewHTML=(review)=>{
             </nav>
         </header>
         <section>
-            <button type="button" class="w-btn w-btn-indigo"  onclick="location.href='/review/create'">글쓰기</button>
+            <button type="button" id="createButton"  onclick="location.href='/review/create'">글쓰기</button>
             ${reviewList(review)}
         </section>
     </body>
@@ -121,7 +125,7 @@ exports.review_create_HTML=()=>{
                     <option value="4">★★★★☆</option>
                     <option value="5">★★★★★</option>
                 </select>
-                <input type="text" id="description" placeholder="내용을 입력하세요" name="description">
+                <textarea id="description"name="description" placeholder="내용을 입력하세요"></textarea>
                 <div id="button">
                     <button type="submit" id="createButton">작성</button>
                     <button type="button" id="cancleButton" onclick="location.href='/'">취소</button>

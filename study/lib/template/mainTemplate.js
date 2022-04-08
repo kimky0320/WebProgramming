@@ -22,8 +22,15 @@ reviewTemplate=(review)=>{
     reviewList="";
     reviewList+="<ul>";
     for(var i=0;i<2;i++){
-        reviewList+=`<li><p>${countingStar(review[i].star)}</p><a class="reviewFont" href="/review/detail/${review[i].id}">${review[i].description}</a></li>`
+        reviewList+=`
+            <li>
+                <h4 class="reviewTitle">${review[i].location}</h4>
+                <p class="reviewStar">${countingStar(review[i].star)}</p>
+                <a class="reviewFont" href="/review/detail/${review[i].id}">${review[i].description}</a>
+                </li>
+                `
     }
+    reviewList+='</ul>'
     return reviewList;
 }
 //아직 구현못함
@@ -109,7 +116,7 @@ exports.mainHTML=(review)=>{
             </header>
             <section>
                 <div id="review">
-                    <h4>베스트 후기</h4>
+                    <h4 id="bestReview">베스트 후기</h4>
                     <a href="/review">+</a>
                 ${reviewTemplate(review)}
                 </div>
