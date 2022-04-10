@@ -39,8 +39,19 @@ router.get('/detail/:pageId',(req,res)=>{ //상세보기 구현
 router.post('/delete_process',(req,res)=>{ //삭제하기 구현
     const body=req.body;
     const id=parseInt(body.id);
+    console.log(id);
     db.query(`DELETE FROM review WHERE id=${id}`,(err,result)=>{
         res.redirect(302,'/review');
+    });
+});
+
+router.post('/recommend_process',(req,res)=>{
+    const body=req.body;
+    var recommend=body.recommend;
+    var id=body.id;
+    recommend++;
+    db.query(`UPDATE review SET recommend=${recommend} WHERE id=${id}`,(err,result)=>{
+    res.json(recommend);
     });
 });
 

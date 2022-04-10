@@ -14,6 +14,7 @@ const reviewList=(review)=>{
                     <button class="deleteButton" type="submit">X</button>
                 </form>
             <p>${description}</p>
+            <input type="button" value="추천" id="${review[i].id}" class="ajaxButton"><p class="recommend">${review[i].recommend}</p>
         </li>`
     }
     html+='</ul>' 
@@ -72,6 +73,7 @@ exports.reviewHTML=(review)=>{
             <button type="button" id="createButton"  onclick="location.href='/review/create'">글쓰기</button>
             ${reviewList(review)}
         </section>
+        <script src="/JS/review.js"></script>
     </body>
     </html>
     `

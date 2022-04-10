@@ -125,3 +125,14 @@ section form{
 .reviewList p{
     margin-top: 0;
 }
+.ajaxButton{
+    margin-bottom: 1%;
+    border-style: none;
+    border-radius: 25px;
+    background-color: aliceblue;
+    color: #1e6b7b;
+}
+.recommend{
+    display: inline-block;
+    margin-left: 1%;
+}
